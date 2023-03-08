@@ -1,0 +1,32 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+//Escribir un programa que pida una frase y la muestre toda en mayúsculas y después toda en minúsculas. 
+package javaapplication4;
+import java.util.Scanner;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication4 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner leer = new Scanner(System.in);
+        String frase;
+        String mayus;
+        String minus;
+        System.out.println("escribe una frase");
+        frase=leer.nextLine();
+        minus=frase.toLowerCase();
+        mayus=frase.toUpperCase();
+        System.out.println("la frase en minusculas es: " + minus);
+        System.out.println("la frase en mayusculas es; " + mayus);
+    }
+    
+}
