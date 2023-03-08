@@ -1,0 +1,26 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication1;
+
+import java.util.Scanner;
+public class JavaApplication1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner leer=new Scanner(System.in);
+        System.out.println("escribe una cantidad de grados centigrados");
+        double num = leer.nextInt();
+        double num2=num*2;
+        double num3 = num*3;
+        double num4 = Math.sqrt(num);
+        System.out.println("el doble ,triple y raiz cuadrada de ese numero es: " + num2);
+        System.out.println(": " + num3);
+        System.out.println(": " + num4);
+    }
+    
+}
