@@ -1,0 +1,34 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication7;
+import java.util.Scanner;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication7 {
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        for (int i = 0; i < 3; i++) {
+            
+            System.out.println(" ");
+            System.out.println("escribe un numero del 1 al 20");
+            int num=leer.nextInt();
+            while(num<1 || num>20){
+                System.out.println("valor incorrecto,escribalo de nuevo");
+                num=leer.nextInt();
+                i=i-1;
+            }
+            for (int j = 0; j < num; j++) {
+                if(j==0){
+                    System.out.print("" + num);
+                    System.out.print("*");
+                }else{
+                    System.out.print("*");
+                }
+            }
+        }
+    }
