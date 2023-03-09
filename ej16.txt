@@ -1,0 +1,57 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication7;
+import java.util.Scanner;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication7 {
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+    int num,num1,opcion;
+    int opcion2;
+    opcion=0;
+        System.out.println("escribe dos numeros enteros");
+        num=leer.nextInt();
+        num1=leer.nextInt();
+        while(opcion!=6){
+        System.out.println("MENU");
+        System.out.println("1.sumar");
+        System.out.println("2.restar");
+        System.out.println("3.multiplicar");
+        System.out.println("4.dividir");
+        System.out.println("5.salir");
+        System.out.println("elija una opcion");
+        opcion=leer.nextInt();
+        switch(opcion){
+            case 1:
+                int suma=num+num1;
+                System.out.println("la suma de los numeros es: " + suma);
+                break;
+            case 2:
+                int resta=num-num1;
+                System.out.println("la resta de los numeros es: " + resta);
+                break;
+            case 3:
+                int multiplicacion=num*num1;
+                System.out.println("la multiplicacion de los numeros es: " + multiplicacion);
+                break;
+            case 4:
+                int division=num/num1;
+                System.out.println("la division de los numeros es: " + division);
+                break;
+            case 5: 
+                System.out.println("¿seguro desea salir?1/2");
+                opcion2=leer.nextInt();
+                int letra=2;
+                if(opcion2!=letra){
+                    opcion=opcion+1;
+                }
+                break;
+        }
+        }
+    }
