@@ -1,0 +1,40 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication7;
+import java.util.Scanner;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication7 {
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+       String letra;
+       Boolean logi=false;
+        do{
+            System.out.println("escribe una letra");
+            letra=leer.nextLine();
+        }while(letra.length()!=1);
+        letra=letra.toUpperCase();
+        if(letra.equals("A")){
+         logi=true;
+        }
+        if(letra.equals("I")){
+         logi=true;
+        }
+        if(letra.equals("O")){
+         logi=true;
+        }
+        if(letra.equals("U")){
+         logi=true;
+        }
+        if(letra.equals("E")){
+         logi=true;
+        }
+        if(logi==false){
+            System.out.println("la letra no es una vocal");
+        }
+    }

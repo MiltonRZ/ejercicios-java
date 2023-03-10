@@ -1,0 +1,28 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication7;
+import java.util.Scanner;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication7 {
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        System.out.println("escribe una cantidad de minutos");
+        int min=leer.nextInt();
+        int res=min%60;
+        min=min-res;
+        int horas=min/60;
+        int dias=0;
+        if(horas>=24){
+            dias=horas/24;
+            horas=horas-24*dias;
+        }
+        System.out.print("el equivalente en dias es: " + dias);
+        System.out.print(" y " + horas);
+        System.out.print(" horas ");
+}

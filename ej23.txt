@@ -1,0 +1,44 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication7;
+import java.util.Scanner;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication7 {
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        String letra;
+        System.out.println("escribe el tipo de socio que eres");
+        letra=leer.nextLine();
+        letra=letra.toLowerCase();
+        int tipoa,tipob,tipoc;
+        double trata;
+        tipoa=5000;
+        tipob=4000;
+        tipoc=3000;
+        
+        switch(letra){
+            case "a":
+                System.out.println("escriba el costo del tratamiento");
+                trata=leer.nextInt();
+                System.out.println("debera pagar: " + trata/2);
+                break;
+            case "b":
+                System.out.println("escriba el costo del tratamiento");
+                trata=leer.nextInt();
+                double tipb=35*trata/100;
+                trata=trata-tipb;
+                System.out.println("debera pagar: " + trata);
+                break;
+            case "c":
+                System.out.println("escriba el costo del tratamiento");
+                trata=leer.nextInt();
+                System.out.println("debera pagar: " + trata);
+                break;
+        }
+}

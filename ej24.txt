@@ -1,0 +1,39 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication7;
+import java.util.Scanner;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication7 {
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        System.out.println("escriba la cantidad de personas a evaluar");
+        int num=leer.nextInt();
+        int cont,cont2;
+        float totalaltura,totalbajo,total;
+        double prombajo,promalto;
+        totalaltura=0;
+        totalbajo=0;
+        cont=0;
+        cont2=0;
+        total=0;
+        for (int i = 0; i < num; i++) {
+            System.out.println("escriba la altura");
+            float num2=leer.nextFloat();
+            total=total+num2;
+            cont=cont+1;
+            if(num2<1.6){
+                totalbajo=totalbajo+num2;
+                cont2=cont2+1;
+            }
+        }
+        prombajo=totalbajo/cont2;
+        totalaltura=total/cont;
+        System.out.println("el promedio de altura general es: " + totalaltura);
+        System.out.println("el promedio de altura por debajo de 1.60 es: " + prombajo);
+}

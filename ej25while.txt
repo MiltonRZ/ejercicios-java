@@ -1,0 +1,39 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication7;
+import java.util.Scanner;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication7 {
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        int cont,n,vmin,vmax,num,total;
+        float prom;
+        cont=0;
+        vmin=10000;
+        vmax=-30;
+        total=0;
+        System.out.println("escriba la cantidad de numeros que desea colocar");
+        n=leer.nextInt();
+        while(cont<n){
+            do{
+            System.out.println("escriba un numero");
+            num=leer.nextInt();
+            }while(num<0);
+            total=total+num;
+            if(num<vmin){
+                vmin=num;
+            }
+            if(num>vmax){
+                vmax=num;
+            }
+            cont=cont+1;
+        }
+        prom=total/n;
+        System.out.println("el numero mas bajo es: " + vmin + " , el numero mas alto es: " + vmax + " , el promedio de todos los numeros es: " + prom);
+    }
