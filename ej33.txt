@@ -1,0 +1,31 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication9;
+import java.util.Scanner;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication9 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner leer=new Scanner(System.in);
+        System.out.println("escribe dos numeros");
+        int num=leer.nextInt();
+        int num2=leer.nextInt();
+        esmultiplo(num,num2);
+    }
+    public static void esmultiplo(int num,int num2){
+        if(num%num2==0){
+            System.out.println("el primer numero es multiplo del segundo");
+        }else{
+            System.out.println("el primer numero no es multiplo del segundo");
+        }
+    }
+}

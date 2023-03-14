@@ -1,0 +1,56 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication11;
+import java.util.Scanner;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication11 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner leer=new Scanner(System.in);
+        System.out.println("escriba la cantidad de personas a evaluar");
+        int n=leer.nextInt();
+        for (int i = 0; i < n-1; i++) {
+            System.out.println("escriba el nombre de la persona");
+            String nombre=leer.nextLine();
+            nombre=leer.nextLine();
+            System.out.println("escriba la edad de la persona");
+            int num=leer.nextInt();
+            if(momedad(num,nombre)){
+                System.out.println(" es mayor de edad");
+            }else{
+                System.out.println(" es menor de edad");
+            }
+            System.out.println("desea continuar?si/no");
+            String opcion=leer.nextLine();
+            opcion=leer.nextLine();
+            switch(opcion){
+                case "si":
+                    i=i;
+                    break;
+                case "no":
+                    i=1000000;
+                            break;
+            }
+        }
+    }
+    public static boolean momedad(int num,String nombre){
+        boolean logi;
+        System.out.print(nombre);
+        System.out.print("  edad: " + num);
+        if(num<18){
+            logi=false;
+        }else{
+            logi=true;
+        }
+        return logi;
+    }
+}
