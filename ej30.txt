@@ -1,0 +1,32 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication7;
+import java.util.Scanner;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication7 {
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        System.out.println("escribe las familias a evaluar");
+        int n=leer.nextInt();
+        int cont=0;
+        int edades=0;
+        for (int i = 0; i < n; i++) {
+            System.out.println("escribe la cantidad de hijos de la familia");
+            int m=leer.nextInt();
+            for (int j = 0; j < m; j++) {
+                System.out.println("escribe la edad de tu hijo");
+                int edad=leer.nextInt();
+                edades+=edad;
+                cont++;
+            }
+        }
+        edades=edades/cont;
+        System.out.println("la media de edades de todas las familias es: " + edades);
+    }
+}
