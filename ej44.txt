@@ -1,0 +1,46 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication7;
+import java.util.Scanner;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication7 {
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        int[][] matriz=new int[3][3];
+        int num,sumafila=0,sumacolumna=0,sumadiagonal=0,total=0;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.println("escriba un valor del 1 al 9");
+                num=leer.nextInt();
+                while(num>9 || num<1){
+                    System.out.println("numero incorrecto,escribalo de nuevo");
+                    num=leer.nextInt();
+                }
+                matriz[i][j]=num;
+            }
+        }
+         for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if(i==0){
+                    sumafila+=matriz[i][j];
+                    sumacolumna+=matriz[j][i];
+                }
+                if(i==j){
+                    sumadiagonal+=matriz[i][j];
+                }
+                total+=matriz[i][j];
+            }
+        }
+         total=total/3;
+         int sumatotal=sumafila+sumacolumna+sumadiagonal+total;
+         if(sumatotal==60){
+             System.out.println("el cuadrado es magico");
+         }
+    }
+}
