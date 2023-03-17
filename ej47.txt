@@ -1,0 +1,53 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication7;
+import java.util.Scanner;
+import java.util.Random;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication7 {
+    public static void main(String[] args) {
+        Random r1=new Random();
+        Scanner leer = new Scanner(System.in);
+       double[][] matriz=new double[10][4];
+       double[] vector=new double[10];
+       int apro=0,desapro=0;
+        for (int i = 0; i < 10; i++) {
+            vector[i]=0;
+        }
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.println("escriba las notas del alumno primero del primer tp,segundo tp,primer integrador,segundo integrador");
+                double num=leer.nextDouble();
+                switch(j){
+                    case 0:
+                        matriz[i][j]=num*0.1;
+                        break;
+                    case 1:
+                        matriz[i][j]=num*0.15;
+                        break;
+                    case 2:
+                        matriz[i][j]=num*0.25;
+                        break;
+                    case 3:
+                        matriz[i][j]=num*0.5;
+                        break;
+                }
+                vector[i]+=matriz[i][j];
+            }
+        }
+        for (int i = 0; i < 10; i++) {
+            if (vector[i]>7) {
+                apro++;
+            } else {
+                desapro++;
+            }
+        }
+        System.out.println("la cantidad de alumnos aprobados es de: " + apro + " y la de desaprobados es de: " + desapro);
+    }
+}   

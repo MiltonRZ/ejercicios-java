@@ -1,0 +1,29 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication7;
+import java.util.Scanner;
+import java.util.Random;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication7 {
+    public static void main(String[] args) {
+        Random r1=new Random();
+        Scanner leer = new Scanner(System.in);
+        System.out.println("ingrese el tamaño del vector");
+        int n=leer.nextInt();
+        int[] vector=new int[n];
+        int suma=0;
+        for (int i = 0; i < n; i++) {
+            System.out.println("escriba un valor para el vector");
+            int num=leer.nextInt();
+            vector[i]=num;
+            suma+=num;
+        }
+        System.out.println("la suma de todos los valores del vector es: " + suma);
+    }
+}
