@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication7;
+import java.util.Scanner;
+import java.util.Random;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication7 {
+    public static void main(String[] args) {
+        Random r1=new Random();
+        Scanner leer = new Scanner(System.in);
+        System.out.println("ingrese la cantidad de euros que posee");
+        double euro=leer.nextDouble();
+        System.out.println("escriba la moneda que quiere convertir los euros");
+        String moneda=leer.nextLine();
+        moneda=leer.nextLine();
+        conversion(euro,moneda);
+    }
+    public static void conversion(double euro,String moneda){
+        if(moneda.equals("dolares")){
+            euro=euro*1.28611;
+            System.out.println("tiene: " + euro + " de dolares");
+        }else{
+            if(moneda.equals("yenes")){
+                 euro=euro*129.852;
+            System.out.println("tiene: " + euro + " de yenes");
+            }else{
+                 euro=euro*0.86;
+            System.out.println("tiene: " + euro + " de libras");
+            }
+        }
+    }
+}   

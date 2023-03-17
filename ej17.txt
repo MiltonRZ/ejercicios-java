@@ -1,0 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication7;
+import java.util.Scanner;
+import java.util.Random;
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication7 {
+    public static void main(String[] args) {
+        Random r1=new Random();
+        Scanner leer = new Scanner(System.in);
+        String fde="&&&&&",palabra=" ";
+        int correctas=0,incorrectas=0;
+        while(!palabra.equals(fde)){
+            System.out.println("escribe una secuencia");
+            palabra=leer.nextLine();
+            if(palabra.length()<2 || palabra.length()>5){
+                incorrectas++;
+            }else{
+                if(palabra.substring(0,1).equals("x") && palabra.substring(palabra.length()-1,palabra.length()).equals("o")){
+                    correctas++;
+                }else{
+                    incorrectas++;
+                }
+            }
+        }
+        incorrectas=incorrectas-1;
+        System.out.println("la cantidad de secuencias correctas es de: " + correctas + " y las incorrectas son: " + incorrectas);
+    }
+}   
