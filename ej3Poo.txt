@@ -1,0 +1,70 @@
+public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        Operadores op1=new Operadores();
+        op1.llenarnum();
+        int suma = op1.sumar();
+        int resta=op1.restar();
+        int mult=op1.multiplicar();
+        int divi=op1.dividir();
+        System.out.println("suma; "+suma+" resta: "+resta+" multiplicacion: "+mult+" division: "+divi);
+    }
+    
+}
+////////////////////////////
+import java.util.Scanner;
+
+
+public class Operadores {
+    private int num,num1;
+Scanner leer = new Scanner(System.in);
+    
+
+    public Operadores() {
+    }
+
+    
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    public void setNum1(int num1) {
+        this.num1 = num1;
+    }
+
+    public int getNum() {
+        return num;
+    }
+
+    public int getNum1() {
+        return num1;
+    }
+    public int sumar(){
+        return num+num1;
+    }
+    public int restar(){
+        return num-num1;
+    }
+    public int multiplicar(){
+        if (num==0 || num1==0){
+            System.out.println("error");
+            return 0;
+        }else{
+            return num*num1;
+        }    
+    }
+    public int dividir(){
+        if (num==0 || num1==0){
+            System.out.println("error");
+            return 0;
+        }else{
+            return num/num1;
+        }
+        
+    }
+    public void llenarnum(){
+        System.out.println("escriba el valor de los dos numeros");
+        this.num=leer.nextInt();
+        this.num1=leer.nextInt();
+    }
+}

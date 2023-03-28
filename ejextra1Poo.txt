@@ -1,0 +1,47 @@
+public static void main(String[] args) {
+       Cancionn c1=new Cancionn();
+       c1.llenardatos();
+        System.out.println(c1.toString());
+    }
+    
+}
+/////////////////////////
+private String titulo,autor;
+
+    public Cancionn() {
+    }
+    
+    public Cancionn(String titulo, String autor) {
+        this.titulo = " ";
+        this.autor = " ";
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+    public void llenardatos(){
+        Scanner leer=new Scanner(System.in);
+        System.out.println("escriba el autor de la cancion");
+        this.autor=leer.nextLine();
+        System.out.println("escriba el titulo de la cancion");
+        this.titulo=leer.nextLine();
+    }
+
+    @Override
+    public String toString() {
+        return "Cancionn{" + "titulo=" + titulo + ", autor=" + autor + '}';
+    }
+    
+}

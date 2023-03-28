@@ -1,0 +1,70 @@
+public static void main(String[] args) {
+        Scanner leer=new Scanner(System.in);
+        Juego j1=new Juego();
+        for (int i = 0; i < 10000; i++) {
+            System.out.println("desea jugar al juego de la adivinanza?");
+            String opcion=leer.nextLine();
+            if (opcion.equals("si")) {
+                j1.iniciarjuego();
+            } else {
+                i=1000000;
+            }
+        }
+        System.out.println(j1.toString());
+    }
+    
+}
+////////////////////////////////
+private int num1,num2;
+    public int cont=0,jug1=0,jug2=0;
+Scanner leer=new Scanner(System.in);
+    public Juego() {
+    }
+
+    public void setNum1(int num1) {
+        this.num1 = num1;
+    }
+
+    public void setNum2(int num2) {
+        this.num2 = num2;
+    }
+
+    public int getNum1() {
+        return num1;
+    }
+
+    public int getNum2() {
+        return num2;
+    }
+    public void iniciarjuego(){
+        System.out.println("el jugador 1 elige el numero a encontrar");
+        num1=leer.nextInt();
+        System.out.println("jugador 2 tiene 5 intentos para adivinarlo");
+        while(cont<5 && num2!=num1){
+            num2=leer.nextInt();
+            if(num2>num1){
+                System.out.println("mas abajo");
+            }else{
+                System.out.println("mas arriba");
+            }
+            cont++;
+        }
+        if(cont==5){
+            jug1++;
+        }else{
+            jug2++;
+        }
+        if(cont<5){
+            System.out.println("se tardo "+cont+" intentos en encontrar el numero");
+        }else{
+            System.out.println("se agotaron los intentos");
+        }
+        cont=0;
+    }
+
+    @Override
+    public String toString() {
+        return "Juego{" + " jug1 gano: " + jug1 + ", jug2 gano: " + jug2 + '}';
+    }
+    
+}

@@ -1,0 +1,49 @@
+public static void main(String[] args) {
+        Cuenta c1=new Cuenta();
+        c1.llenardatos();
+        c1.retirardinero();
+        System.out.println("le quedan "+c1.getSaldo()+" de saldo en la cuenta");
+    }
+    
+}
+/////////////////////////////
+private int saldo;
+    private String titular;
+    public int retirar;
+    public Cuenta() {
+    }
+
+    public void setSaldo(int saldo) {
+        this.saldo = saldo;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    public int getSaldo() {
+        return saldo;
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+    public void llenardatos(){
+        Scanner leer=new Scanner(System.in);
+        System.out.println("escriba el saldo de la cuenta");
+        this.saldo=leer.nextInt();
+        System.out.println("escriba el titular de la cuenta");
+        this.titular=leer.next();
+    }
+    public void retirardinero(){
+        Scanner leer=new Scanner(System.in);
+        System.out.println("cuanto desea retirar?");
+        retirar=leer.nextInt();
+        if(retirar>saldo){
+            System.out.println("error,escriba de nuevo el saldo a retirar");
+            retirar=leer.nextInt();
+        }
+        System.out.println("dinero retirado");
+        saldo-=retirar;
+    }
+}

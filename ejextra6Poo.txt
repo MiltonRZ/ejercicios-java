@@ -1,0 +1,54 @@
+public static void main(String[] args) {
+       Empleado e1=new Empleado();
+       e1.llenardatos();
+       double aumen=e1.aumento();
+        System.out.println("su salario aumentara en: "+aumen);
+    }
+    
+}
+////////////////////////////
+private String nombre;
+    private int edad,salario;
+    Scanner leer=new Scanner(System.in);
+    public Empleado() {
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setSalario(int salario) {
+        this.salario = salario;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public int getSalario() {
+        return salario;
+    }
+    public void llenardatos(){
+        System.out.println("escriba su edad");
+        this.edad=leer.nextInt();
+        System.out.println("escriba su salario");
+        this.salario=leer.nextInt();
+    }
+    public double aumento(){
+        double total;
+        if(edad<30){
+            total=salario/20;
+        }else{
+            total=salario/10;
+        }
+        return total;
+    }
+}

@@ -1,0 +1,62 @@
+public static void main(String[] args) {
+        Puntos p1=new Puntos();
+        p1.llenardatos();
+        p1.caldistancia();
+        double dist=p1.caldistancia();
+        System.out.println("la distancia entre los dos puntos es: "+dist);
+    }
+    
+}
+///////////////////////
+private int x1,x2,y1,y2;
+
+    public Puntos() {
+    }
+
+    public void setX1(int x1) {
+        this.x1 = x1;
+    }
+
+    public void setX2(int x2) {
+        this.x2 = x2;
+    }
+
+    public void setY1(int y1) {
+        this.y1 = y1;
+    }
+
+    public void setY2(int y2) {
+        this.y2 = y2;
+    }
+
+    public int getX1() {
+        return x1;
+    }
+
+    public int getX2() {
+        return x2;
+    }
+
+    public int getY1() {
+        return y1;
+    }
+
+    public int getY2() {
+        return y2;
+    }
+    public void llenardatos(){
+        Scanner leer=new Scanner(System.in);
+        System.out.println("escribe los dos puntos del primer punto(primero x y despues y)");
+        this.x1=leer.nextInt();
+        this.y1=leer.nextInt();
+        System.out.println("ahora del segundo");
+        this.x2=leer.nextInt();
+        this.y2=leer.nextInt();
+    }
+    public double caldistancia(){
+        double distancia;
+        int valor=((x1*x1)-(x2*x2))+((y1*y1)-(y2*y2));
+        distancia=Math.sqrt(valor);
+        return distancia;
+    }
+}

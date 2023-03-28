@@ -1,0 +1,50 @@
+package ej1poo;
+import ej1poo.entidad.Libro;
+import java.util.Scanner;
+////Crear una clase llamada Libro que contenga los siguientes atributos: ISBN, Título, Autor, Número de páginas, y un constructor con 
+//todos los atributos pasados por parámetro y un constructor vacío. Crear un método para cargar un libro pidiendo los datos al usuario 
+//y luego informar mediante otro método el número de ISBN, el título, el autor del libro y el número de páginas.
+
+public class Ej1POO {
+
+    
+    public static void main(String[] args) {
+        Scanner leer=new Scanner(System.in);
+        Libro l1=new Libro(leer.nextInt(), leer.nextInt(), leer.next(), leer.next());
+        System.out.println(l1.toString());
+        
+    }
+
+    
+    
+}
+/////////////////////////////////////////////
+package ej1poo.entidad;
+
+////Crear una clase llamada Libro que contenga los siguientes atributos: ISBN, Título, Autor, Número de páginas, y un constructor con 
+//todos los atributos pasados por parámetro y un constructor vacío. Crear un método para cargar un libro pidiendo los datos al usuario 
+//y luego informar mediante otro método el número de ISBN, el título, el autor del libro y el número de páginas.
+public class Libro {
+    public int isbn;
+    public String titulo;
+    public String autor;
+    public int numpaginas;
+
+    public Libro() {
+    }
+
+    public Libro(int isbn,int numpaginas ,String titulo ,String autor) {
+        this.isbn = isbn;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.numpaginas = numpaginas;
+    }
+
+   
+
+    @Override
+    public String toString() {
+        return "Libro{" + "isbn=" + isbn + ", titulo=" + titulo + ", autor=" + autor + ", numpaginas=" + numpaginas + '}';
+    }
+    
+}

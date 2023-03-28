@@ -1,0 +1,80 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication16;
+
+import java.util.Scanner;
+import javaapplication16.entidad.Circunferencia;
+
+/**
+ *
+ * @author dasd2
+ */
+public class JavaApplication16 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner leer=new Scanner(System.in);
+        
+        Circunferencia c1=new Circunferencia(leer.nextDouble());
+        Circunferencia c3=new Circunferencia(c1.getRadio(), Math.PI*(c1.getRadio()*c1.getRadio()), 2*Math.PI*c1.getRadio());
+        System.out.println(c3.toString());
+    }
+    
+}
+/////////////////////////////////
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication16.entidad;
+
+/**
+ *
+ * @author dasd2
+ */
+public class Circunferencia {
+    private double radio;
+    public double area;
+    public double perimetro;
+
+    public Circunferencia(double radio) {
+        this.radio = radio;
+    }
+
+    public void setRadio(double radio) {
+        this.radio = radio;
+    }
+
+    public double getRadio() {
+        return radio;
+    }
+    public double crearCircunferencia(double radio){
+        return radio;
+    }
+
+    public Circunferencia(double area, double perimetro) {
+        this.area = area;
+        this.perimetro = perimetro;
+    }
+
+    public Circunferencia(double radio, double area, double perimetro) {
+        this.radio = radio;
+        this.area = area;
+        this.perimetro = perimetro;
+    }
+   
+
+    @Override
+    public String toString() {
+        return "Circunferencia{" + "radio=" + radio + ", area=" + area + ", perimetro=" + perimetro + '}';
+    }
+
+    
+    
+}

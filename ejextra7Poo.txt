@@ -1,0 +1,32 @@
+public static void main(String[] args) {
+        Rectangulo r1=new Rectangulo();
+        int area=r1.calarea();
+        System.out.println("el area del rectangulo es: "+area);
+    }
+    
+}
+///////////////////////////////////
+private int lado1=4,lado2=6;
+
+    public Rectangulo() {
+    }
+
+    public void setLado1(int lado1) {
+        this.lado1 = lado1;
+    }
+
+    public void setLado2(int lado2) {
+        this.lado2 = lado2;
+    }
+
+    public int getLado1() {
+        return lado1;
+    }
+
+    public int getLado2() {
+        return lado2;
+    }
+    public int calarea(){
+        return lado1*lado2;
+    }
+}

@@ -1,0 +1,53 @@
+public static void main(String[] args) {
+       Rectangulos r1=new Rectangulos();
+       r1.llenardatos();
+       r1.crearrectangulo();
+       int sup=r1.calsup();
+       int per=r1.calper();
+        System.out.println("el perimetro del rectangulo es: "+per+" y la superficie: "+sup);
+    }
+    
+}
+//////////////////////////////////////////
+ private int base,altura;
+
+    public Rectangulos() {
+    }
+
+    public void setBase(int base) {
+        this.base = base;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
+
+    public int getBase() {
+        return base;
+    }
+
+    public int getAltura() {
+        return altura;
+    }
+    public void crearrectangulo(){
+        for (int i = 0; i < altura; i++) {
+            for (int j = 0; j < base; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+    public void llenardatos(){
+        Scanner leer=new Scanner(System.in);
+        System.out.println("escriba la altura del rectangulo");
+        this.altura=leer.nextInt();
+        System.out.println("ahora la base");
+        this.base=leer.nextInt();
+    }
+    public int calsup(){
+        return base*altura;
+    }
+    public int calper(){
+        return (base+altura)*2;
+    }
+}
